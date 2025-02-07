@@ -3,19 +3,56 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  background-color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Hanken Grotesk', Arial, sans-serif;
+  background-color: white;
+}
+
+@layer base {
+  body {
+    @apply dark:bg-black bg-white;
+  }
+}
+
+@layer utilities {
+  .btn-hover {
+    @apply hover:scale-95 hover:translate-y-[0.25em] transition-transform duration-200;
+  }
+  .text-title {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+  .text-subtitle {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+  .tex-caption {
+    @apply text-sm md:text-base lg:text-lg;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-secondary {
+    @apply bg-accent text-black;
+  }
+  .btn-small {
+    @apply py-2 px-4;
+  }
+  .btn-medium {
+    @apply py-3 px-6;
+  }
+  .btn-large {
+    @apply py-4 px-8;
+  }
+  .btn-circle {
+    @apply rounded-full md:w-16 md:h-16 w-10 h-10;
+  }
+  .hover-link {
+    @apply cursor-pointer transition-all duration-300 hover:text-primary hover:scale-110;
+  }
 }
