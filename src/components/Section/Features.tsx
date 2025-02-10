@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -36,6 +36,10 @@ const data: CardData[] = [
 
 const Features: React.FC = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  const setCardRef = useCallback((el: HTMLDivElement | null, index: number) => {
+    cardsRef.current[index] = el;
+  }, []);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -83,7 +87,7 @@ const Features: React.FC = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            ref={(el) => (cardsRef.current[index] = el)}
+            ref={(el) => setCardRef(el, index)}
             className="flex justify-center items-center mt-12 w-full max-w-lg md:max-w-3xl"
           >
             <div className="relative w-full h-[500px] bg-black rounded-xl shadow-lg overflow-hidden">
