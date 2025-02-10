@@ -31,12 +31,13 @@ const Hero: React.FC = () => {
         word,
         {
           color: '#ffcc66',
-          fontWeight: 'bold',
           duration: 0.3,
         },
         index * 0.15
       );
     });
+
+    ScrollTrigger.refresh();
 
     return () => {
       tl.kill();
@@ -66,11 +67,11 @@ const Hero: React.FC = () => {
           priority={true}
           className="md:w-1/2"
         />
-        <div>
-          <h1 className="lg:text-5xl md:text-4xl text-2xl text-black dark:text-white font-medium">
+        <div className='p-2 md:p-0'>
+          <h1 className="lg:text-5xl md:text-4xl text-2xl [ text-black dark:text-white font-semibold ]">
             Discover the Future of Decentralized Art & Finance
           </h1>
-          <div className="mt-4">
+          <div className="mt-2 md:mt-4">
             <p ref={subtitleRef} className="text-lg leading-relaxed">
               {words}
             </p>
@@ -79,7 +80,7 @@ const Hero: React.FC = () => {
             size="large"
             color="primary"
             onClick={() => {}}
-            className="rounded-full mt-2 text-caption"
+            className="rounded-full mt-2 text-caption dark:bg-white dark:text-black"
           >
             Get Started
           </Button>
