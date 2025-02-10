@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="[ bg-gradient-to-r dark:from-gray-400 from-black dark:to-white to-gray-200 text-transparent bg-clip-text ] text-2xl">
           ethereal
         </div>
-        <div className="flex md:space-x-4 space-x-2">
+        <div className="flex gap-4">
           <ThemeToggle />
           <MenuToggle />
         </div>
