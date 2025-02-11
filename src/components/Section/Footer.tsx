@@ -5,16 +5,23 @@ import { FaLinkedin, FaFacebook } from 'react-icons/fa';
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
+  const links = ['Home', 'Features', 'Connect'];
   return (
     <div className="w-3/5 mx-auto my-16">
       <div className="flex md:flex-row flex-col md:gap-0 gap-4 justify-between items-center text-black">
         <div className="[ bg-gradient-to-r dark:from-gray-400 from-black dark:to-white to-gray-200 text-transparent bg-clip-text ] text-2xl">
           ethereal
         </div>
-        <ul className="flex gap-6 text-caption">
-          <li className="hover-link">Home</li>
-          <li className="hover-link">Features</li>
-          <li className="hover-link">Connect</li>
+        <ul className="flex gap-6 text-caption dark:text-white">
+          {links.map((link, index) => (
+            <a
+              key={index}
+              className="hover-link"
+              href={`#${link.toLowerCase()}`}
+            >
+              <li>{link}</li>
+            </a>
+          ))}
         </ul>
         <div className="flex gap-4 dark:text-white">
           <FaXTwitter size={20} className="cursor-pointer " />

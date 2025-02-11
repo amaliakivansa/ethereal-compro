@@ -8,6 +8,8 @@ const MenuToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
 
+  const links = ['Home', 'Features', 'Connect'];
+
   return (
     <>
       {/* Toggle Button */}
@@ -32,17 +34,25 @@ const MenuToggle = () => {
           }`}
         >
           <ul className="text-xl font-semibold text-black text-center space-y-6">
-            <li className="hover-link cursor-pointer">Home</li>
-            <li className="hover-link cursor-pointer">Features</li>
-            <li className="hover-link cursor-pointer">Connect</li>
+            {links.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={`#${link.toLowerCase()}`}
+                  className="hover-link cursor-pointer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
           </ul>
 
           {/* Close Button */}
           <button
             onClick={handleClick}
-            className="absolute top-4 right-4 transition-transform duration-300 hover:scale-110"
+            className="absolute top-10 right-56 transition-transform duration-300 hover:scale-110"
           >
-            <IoIosCloseCircle size={40} className="text-black" />
+            <IoIosCloseCircle size={40} className="text-black lg:text-2xl md:text-xl text-lg" />
           </button>
         </div>
       </div>

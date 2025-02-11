@@ -79,7 +79,10 @@ const Features: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center w-full py-20 px-2 md:px-0">
+    <div
+      id="features"
+      className="flex flex-col justify-center w-full py-20 px-2 md:px-0"
+    >
       <h2 className="text-title text-center text-black dark:text-white mb-2">
         Our Key Features
       </h2>

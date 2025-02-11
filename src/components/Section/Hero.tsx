@@ -55,6 +55,7 @@ const Hero: React.FC = () => {
 
   return (
     <section
+      id="home"
       ref={containerRef}
       className="w-full h-screen flex items-center justify-center my-20"
     >

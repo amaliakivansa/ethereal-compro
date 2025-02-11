@@ -4,7 +4,7 @@ import Button from '../Base/Button';
 
 const CTA = () => {
   return (
-    <div className="flex flex-col items-center pb-16 -mt-16">
+    <div id="connect" className="flex flex-col items-center pb-16 -mt-16">
       <h1 className="text-title dark:text-white text-black font-semibold">
         Join the Future Today
       </h1>
