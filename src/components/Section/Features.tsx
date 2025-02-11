@@ -15,21 +15,21 @@ interface CardData {
 
 const data: CardData[] = [
   {
-    title: 'Decentralized Ownership & Security',
+    title: 'Seamless Wallet Integration',
     description:
-      'Ensure true ownership of digital assets with blockchain-powered transparency and security, eliminating the risk of fraud or third-party control.',
+      'Ethereal ensures a frictionless onboarding experience with one-click wallet connections (MetaMask, WalletConnect, etc.), allowing users to dive into the platform instantly.',
     image: 'features-1',
   },
   {
-    title: 'Fair & Transparent Value Exchange',
+    title: 'Immersive UI & Smooth Animations',
     description:
-      'Empower artists and investors with a fair marketplace, enabling direct transactions without intermediaries, ensuring creators receive rightful value for their work.',
+      'A sleek, futuristic interface with smooth micro-interactions and dynamic motion, creating an elegant and engaging user experience.',
     image: 'features-2',
   },
   {
-    title: 'Borderless Financial Freedom',
+    title: 'Decentralized & Secure Transactions',
     description:
-      'Break geographical barriers with a global, decentralized ecosystem that provides seamless transactions and investment opportunities, accessible to everyone, anywhere.',
+      'Built on smart contracts, Ethereal guarantees transparency, low fees, and instant transactions for NFT trading, staking, or DeFi operations, ensuring users have full control over their assets.',
     image: 'features-3',
   },
 ];
