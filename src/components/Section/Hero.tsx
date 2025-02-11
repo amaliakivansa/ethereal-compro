@@ -62,12 +62,12 @@ const Hero: React.FC = () => {
         <Image
           src="/images/hero-img.png"
           width={650}
-          height={0}
+          height={433}
           alt="background image"
           priority={true}
           className="md:w-1/2"
         />
-        <div className='p-2 md:p-0'>
+        <div className="p-2 md:p-0">
           <h1 className="lg:text-5xl md:text-4xl text-2xl [ text-black dark:text-white font-semibold ]">
             Discover the Future of Decentralized Art & Finance
           </h1>
