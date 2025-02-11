@@ -7,13 +7,17 @@ import Benefits from '@/components/Section/Benefits';
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
-      <Navbar />
-      <Hero />
-      <Features />
+    <>
+      <div className="container mx-auto">
+        <Navbar />
+        <Hero />
+        <Features />
+      </div>
       <Benefits />
-      <CTA />
-      <Footer />
-    </div>
+      <div className="container mx-auto">
+        <CTA />
+        <Footer />
+      </div>
+    </>
   );
 }
